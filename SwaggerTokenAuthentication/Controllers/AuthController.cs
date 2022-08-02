@@ -32,7 +32,7 @@ public class AuthController : ControllerBase
 
             var tokenOptions = new JwtSecurityToken(
                 issuer: _jwtConfigurationOptions.Issuer,
-                audience: _jwtConfigurationOptions.Issuer,
+                audience: _jwtConfigurationOptions.Audience,
                 claims: new List<Claim>(),
                 expires: DateTime.Now.AddMinutes(50),
                 signingCredentials: signinCredentials
